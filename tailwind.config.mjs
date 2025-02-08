@@ -8,10 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+        'ailab': {
+          DEFAULT: '#E7AAB6',
+        },
+        'ailab-purple': {
+          DEFAULT: '#8078C3'
+        },
+        'ailab-yellow': {
+          DEFAULT: '#D7EB56'
+        },
+      }
+    }
   },
   plugins: [],
 };
