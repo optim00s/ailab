@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Azerbaijan Artificial Intelligence Lab",
-  description: "An",
+  description: "An advancing AI research and software development company",
   icons: {
     icon: '/favicon.ico'
   }

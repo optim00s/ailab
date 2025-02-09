@@ -13,7 +13,7 @@ export const announcementData = [
     },
     {
         id: 3,
-        title: "Introducing AI Academy, a new education center for developing future engineer and researcher",
+        title: "Introducing AI Academy, a new education center for developing future engineers and researchers",
         date: "Oct 25, 2024",
         linkPath: "/announcements/ai-academy"
     }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link.js";
 import Navigation from "../components/Navigation.jsx";
 import Button from "@/ui/Button.jsx";
 import Announcements from "@/components/Announcements.jsx";
@@ -165,9 +166,17 @@ export default function Home() {
               <div className="text-3xl">AI Academy</div>
               <div className="text-lg text-balance">Advancing science, fostering talent, and creating ethical AI solutions for a smarter future. To join fully scholarships classes register now!</div>
             </div>
-            <div className="flex flex-col gap-3 w-full md:w-96">
-              <Button variant="darkPrimary">Apply Now</Button>
-              <Button variant="darkOutline">Learn More</Button>
+            <div className="flex flex-col gap-3">
+              <Link href={'https://www.aiacademy.az/#applyNow'} target="_blank" rel="noopener noreferrer">
+                <Button variant="darkPrimary" fullWidth className="md:w-96">
+                    Apply Now
+                </Button>
+              </Link>
+              <Link href={'https://www.aiacademy.az/'} target="_blank" rel="noopener noreferrer">
+                <Button variant="darkOutline" fullWidth className="md:w-96">
+                    Learn More
+                </Button>
+              </Link>
             </div>
           </div> 
           <div>
@@ -179,9 +188,13 @@ export default function Home() {
           <div className="flex flex-col gap-5 items-start">
             <div className="flex flex-col gap-3">
               <div className="text-3xl">Work with AILab</div>
-              <div className="text-lg text-balance">AILab is an AI research company based on Baku, Azerbaijan. Join us as we lead the way in advancing artificial intelligence through groundbreaking research and practical applications. Build ethical and open source AI for world.</div>
+              <div className="text-lg text-balance">AILab is an AI research company based in Baku, Azerbaijan. Join us as we lead the way in advancing artificial intelligence through groundbreaking research and practical applications. Build ethical and open source AI for the world.</div>
             </div>
-            <Button variant="secondary" fullWidth="true" className="md:w-96">See open roles</Button>
+            <Link href={'https://jobs.glorri.com/companies/ailab'} target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" fullWidth="true" className="md:w-96">
+                  See open roles            
+              </Button>
+            </Link>
           </div>
           <div>
             <Image className="rounded-xl" src="/images/work-with-us.png" width={1700} height={400} sizes="(min-width: 640px) 330px, (min-width: 768px) 500px, (min-width: 1024px) 800px" alt="AILab's working spaces"/>
@@ -240,7 +253,7 @@ export default function Home() {
           </div>
         </div>
         <div className="">
-            AILab © 2025. All right reserved.
+            AILab © 2025. All rights reserved.
         </div>
       </footer>
     </div>

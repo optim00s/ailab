@@ -1,5 +1,5 @@
 import { announcementData } from "@/lib/announcementData";
-import AnnouncementCard from "@/ui/AnnouncmentCard";
+import AnnouncementCard from "@/ui/AnnouncementCard";
 
 const Announcements = () => {
     return (
