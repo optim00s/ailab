@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Navigation from "../components/Navigation.jsx";
+import Button from "@/ui/Button.jsx";
+import Announcements from "@/components/Announcements.jsx";
+import Projects from "@/components/Projects.jsx";
 
 export default function Home() {
   return (
@@ -12,12 +15,8 @@ export default function Home() {
             <div className="text-xl md:text-2xl">All new WB1 for your complex tasks</div>
           </div> 
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-            <button className="bg-ailab-purple px-7 py-3 rounded-lg transition-all duration-200 hover:bg-ailab-purple/60">
-              Talk to Whitebeard
-            </button>
-            <button className="bg-ailab-purple px-7 py-3 rounded-lg transition-all duration-200 hover:bg-ailab-purple/60">
-              API Documentaion  
-            </button>
+            <Button variant="primary">Talk to Whitebeard</Button>
+            <Button variant="primary">API Documentation</Button>
           </div>
         </div>
         {/* Benchmark Comparison */}
@@ -148,106 +147,18 @@ export default function Home() {
             *AILab WB1 represents a significant leap forward in the field of large language models, combining exceptional performance in multiple domains with a unique ability to excel in specific tasks.
           </div>
         </div>
-        {/* announcements */}
         <div className="flex flex-col gap-3 mt-10 mb-10 mx-10 px-3">
           <div className="text-xl mb-3">
             Announcements
           </div>
-          <div className="grid grid-cols-1 gap-y-5">
-            <div className="flex items-center rounded-xl bg-ailab-purple/20 border border-ailab-purple px-3 py-3 transition-all duration-300 hover:scale-105 cursor-pointer">
-              <div className="w-full flex flex-col justify-between gap-5 p-2">
-                <div className="text-2xl">AILab Internship Program – Your Gateway to Becoming a Future Expert!</div>
-                <div className="text-lg text-white/50">Feb 4, 2025</div>                
-              </div>
-              <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-ailab-purple/20 group-hover:bg-ailab-purple transition-all duration-300">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-            <div className="flex items-center rounded-xl bg-ailab-purple/20 border border-ailab-purple px-3 py-3 transition-all duration-300 hover:scale-105 cursor-pointer">
-              <div className="w-full flex flex-col justify-between gap-5 p-2">
-                <div className="text-2xl">DigiRise Program – in collaboration with HarbourSpace</div>
-                <div className="text-lg text-white/50">Nov 22, 2024</div>                
-              </div>
-              <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-ailab-purple/20 group-hover:bg-ailab-purple transition-all duration-300">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-            <div className="flex items-center rounded-xl bg-ailab-purple/20 border border-ailab-purple px-3 py-3 transition-all duration-300 hover:scale-105 cursor-pointer">
-              <div className="w-full flex flex-col justify-between gap-5 p-2">
-                <div className="text-2xl">Introducing AI Academy, a new education center for developing future engineer and researcher</div>
-                <div className="text-lg text-white/50">Oct 25, 2024</div>                
-              </div>
-              <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-ailab-purple/20 group-hover:bg-ailab-purple transition-all duration-300">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          </div>
+          <Announcements />
         </div>
-        {/* our projects */}
         <div className="flex flex-col gap-3 mb-10 mx-10 px-3">
           <div className="text-xl mb-3">
             Our Projects
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
-            <div className="group w-full h-[400px] flex flex-col rounded-xl overflow-hidden bg-gradient-to-b from-ailab-purple/20 to-ailab-purple/5 border border-ailab-purple/30 hover:border-ailab-purple transition-all duration-300">
-              <div className="w-full h-[60%] overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: 'url(/images/wb-1.png)' }}>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 p-6">
-                <div className="text-xl text-ailab-purple">W1</div>
-                <div className="text-lg text-white/80">Our latest and most powerful model with CoT capabilities</div>
-              </div>
-            </div>
-            <div className="group w-full h-[400px] flex flex-col rounded-xl overflow-hidden bg-gradient-to-b from-ailab-purple/20 to-ailab-purple/5 border border-ailab-purple/30 hover:border-ailab-purple transition-all duration-300">
-              <div className="w-full h-[60%] overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: 'url(/images/legalens-logo.jpg)' }}>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 p-6">
-                <div className="text-xl text-ailab-purple">Legalens</div>
-                <div className="text-lg text-white/80">An effective search platform based on a single legislative base of Azerbaijan</div>
-              </div>
-            </div>
-            <div className="group w-full h-[400px] flex flex-col rounded-xl overflow-hidden bg-gradient-to-b from-ailab-purple/20 to-ailab-purple/5 border border-ailab-purple/30 hover:border-ailab-purple transition-all duration-300">
-              <div className="w-full h-[60%] overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: 'url(/images/neyron-ai.png)' }}>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 p-6">
-                <div className="text-xl text-ailab-purple">Neyron.ai</div>
-                <div className="text-lg text-white/80">Beginner-friendly interactive AI learning platform for everyone!</div>
-              </div>
-            </div>
-            <div className="group w-full h-[400px] flex flex-col rounded-xl overflow-hidden bg-gradient-to-b from-ailab-purple/20 to-ailab-purple/5 border border-ailab-purple/30 hover:border-ailab-purple transition-all duration-300">
-              <div className="w-full h-[60%] overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: 'url(/images/dlp.png)' }}>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 p-6">
-                <div className="text-xl text-ailab-purple">DLP</div>
-                <div className="text-lg text-white/80">Digital Logistics Platform is a platform that helps cargo owners in export and import, carrier finding processes</div>
-              </div>
-            </div>
-            <div className="group w-full h-[400px] flex flex-col rounded-xl overflow-hidden bg-gradient-to-b from-ailab-purple/20 to-ailab-purple/5 border border-ailab-purple/30 hover:border-ailab-purple transition-all duration-300">
-              <div className="w-full h-[60%] overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: 'url(/images/datarace-ai.png)' }}>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 p-6">
-                <div className="text-xl text-ailab-purple">datarace.ai</div>
-                <div className="text-lg text-white/80">An AI platform where developers and researchers can build models, develop datasets, analyze and compete</div>
-              </div>
-            </div>            
-          </div>
+          <Projects />
         </div>
-        {/* AI Academy */}
         <div className="w-full min-h-[calc(100vh-190px)] text-black/80 flex flex-col-reverse sm:flex-row md:flex-row lg:flex-row items-center justify-between bg-ailab-yellow py-10 px-10 gap-10 md:gap-0">
           <div className="flex flex-col items-start gap-7">
             <div className="flex flex-col gap-3">
@@ -255,12 +166,8 @@ export default function Home() {
               <div className="text-lg text-balance">Advancing science, fostering talent, and creating ethical AI solutions for a smarter future. To join fully scholarships classes register now!</div>
             </div>
             <div className="flex flex-col gap-3 w-full md:w-96">
-              <button className="bg-black px-7 py-3 text-white rounded-lg transition-all duration-200 hover:bg-black/70">
-                Apply Now
-              </button>
-              <button className="bg-transparent border-2 border-black px-7 py-3 text-black rounded-lg transition-all duration-200 hover:bg-black/70 hover:text-white">
-                Learn More
-              </button>
+              <Button variant="darkPrimary">Apply Now</Button>
+              <Button variant="darkOutline">Learn More</Button>
             </div>
           </div> 
           <div>
@@ -274,7 +181,7 @@ export default function Home() {
               <div className="text-3xl">Work with AILab</div>
               <div className="text-lg text-balance">AILab is an AI research company based on Baku, Azerbaijan. Join us as we lead the way in advancing artificial intelligence through groundbreaking research and practical applications. Build ethical and open source AI for world.</div>
             </div>
-            <button className="w-full md:w-96 bg-transparent border-2 border-ailab-purple px-7 py-3 text-ailab-purple rounded-lg transition-all duration-200 hover:bg-ailab-purple/30 hover:text-white">See open roles</button>
+            <Button variant="secondary" fullWidth="true" className="md:w-96">See open roles</Button>
           </div>
           <div>
             <Image className="rounded-xl" src="/images/work-with-us.png" width={1700} height={400} sizes="(min-width: 640px) 330px, (min-width: 768px) 500px, (min-width: 1024px) 800px" alt="AILab's working spaces"/>
