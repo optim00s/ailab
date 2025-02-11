@@ -41,7 +41,7 @@ export default function Home() {
               <div className="text-3xl">AI Academy</div>
               <div className="text-lg text-balance">Advancing science, fostering talent, and creating ethical AI solutions for a smarter future. To join fully scholarships classes register now!</div>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-full">
               <Link href={'https://www.aiacademy.az/#applyNow'} target="_blank" rel="noopener noreferrer">
                 <Button variant="darkPrimary" fullWidth="true" className="md:w-96">
                     Apply Now
